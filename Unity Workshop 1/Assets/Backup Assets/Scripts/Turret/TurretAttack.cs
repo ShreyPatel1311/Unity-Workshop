@@ -8,14 +8,17 @@ public class TurretAttack : MonoBehaviour
     [SerializeField] private GameObject barrel;
     [SerializeField] private float fireRate;
     [SerializeField] private float lifetime;
+    [SerializeField] private AudioClip clip;
 
     private GameObject bullet;
     private GameObject player;
+    private AudioSource audioS;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        audioS = GetComponent<AudioSource>();
         StartCoroutine(ShotBullet());
     }
 
@@ -23,6 +26,7 @@ public class TurretAttack : MonoBehaviour
     private IEnumerator ShotBullet()
     {
         bullet = Instantiate(bulletPrefab, barrel.transform.position, Quaternion.identity);
+        audioS.PlayOneShot(clip);
         bullet.transform.LookAt(player.transform.position);
         Destroy(bullet, lifetime);
 

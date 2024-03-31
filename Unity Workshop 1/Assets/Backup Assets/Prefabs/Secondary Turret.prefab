@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6021713337253463897}
   - component: {fileID: 5854262305231937377}
   - component: {fileID: 9035792898710099582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6924356492909921797}
   - component: {fileID: 4970811890022318739}
   - component: {fileID: 8369823098595394988}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_caliber_gun_029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 6925901092647169475}
   - component: {fileID: 3478961300912256240}
   - component: {fileID: 9031463114100612805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 1610697987939927577}
   - component: {fileID: 655167823391320764}
   - component: {fileID: 4707927734825387305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gun_barrel_029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 6351231473946770413}
   - component: {fileID: 621416719112185626}
   - component: {fileID: 5236654358460145743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_caliber_turret_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,9 +457,10 @@ GameObject:
   - component: {fileID: 7178196680045773543}
   - component: {fileID: 3672548215237528703}
   - component: {fileID: 2049049321385412376}
-  m_Layer: 0
+  - component: {fileID: 6455067829950719999}
+  m_Layer: 3
   m_Name: Secondary Turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,8 +512,150 @@ MonoBehaviour:
     type: 3}
   distance: 100
   barrel: {fileID: 4254688629371288882}
-  fireRate: 5
-  lifetime: 5
+  fireRate: 20
+  lifetime: 10
+  clip: {fileID: 8300000, guid: de3eac15899926f4e839ded0d7d4e4a1, type: 3}
+--- !u!82 &6455067829950719999
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5950736977571187582}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a7187c7e3e85d3545bcb254a9232c4e6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 400
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.004
+      value: 1
+      inSlope: -2.3583226
+      outSlope: -2.3583226
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.027571138
+      value: 0.8517914
+      inSlope: -3.9078176
+      outSlope: -3.9078176
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.13485801
+      value: 0.49464417
+      inSlope: -0.9769544
+      outSlope: -0.9769544
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.20771573
+      value: 0.371727
+      inSlope: -1.4078315
+      outSlope: -1.4078315
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.30914637
+      value: 0.25134277
+      inSlope: -1.2423893
+      outSlope: -1.2423893
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.6005773
+      value: 0.099472046
+      inSlope: -0.31362155
+      outSlope: -0.31362155
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.6163637
+    - serializedVersion: 3
+      time: 1
+      value: 0.004
+      inSlope: -0.004001602
+      outSlope: -0.004001602
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6821140111931145346
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +667,7 @@ GameObject:
   - component: {fileID: 4085512388859972866}
   - component: {fileID: 3835317527646176305}
   - component: {fileID: 4111721815038100426}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: turret_035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +752,7 @@ GameObject:
   - component: {fileID: 7606420021527519735}
   - component: {fileID: 2072873842190707457}
   - component: {fileID: 8147516461804802625}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: gun_barrel_028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7449645445855425683}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Turret Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +868,7 @@ GameObject:
   - component: {fileID: 1413606301377445734}
   - component: {fileID: 6872632114653670435}
   - component: {fileID: 4303358506335252956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_caliber_gun_028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3761211513724573220}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
