@@ -52,7 +52,7 @@ public class AirplanController : MonoBehaviour
 
         UpdateHUD();
         AdjustThrustSoundFX(thrust);
-    }    
+    }
 
     private void FixedUpdate()
     {
@@ -66,7 +66,7 @@ public class AirplanController : MonoBehaviour
 
     private void AdjustThrustSoundFX(float thrust)
     {
-        if(thrust < 50 && thrust > 0f && rb.velocity.magnitude * 3.6f < 125f && transform.position.y < 15f)
+        if(thrust < 50 && rb.velocity.magnitude * 3.6f < 125f && transform.position.y < 15f)
         {
             audioS.PlayOneShot(jetEngineStart);
         }
