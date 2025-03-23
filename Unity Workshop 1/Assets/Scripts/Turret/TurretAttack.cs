@@ -7,7 +7,6 @@ public class TurretAttack : MonoBehaviour
     [SerializeField] private float distance;
     [SerializeField] private GameObject barrel;
     [SerializeField] private float fireRate;
-    [SerializeField] private float lifetime;
     [SerializeField] private AudioClip clip;
     [SerializeField] private float turretRange;
 
@@ -17,6 +16,7 @@ public class TurretAttack : MonoBehaviour
     private Vector3 prevPosition;
     private Vector3 currPosition;
     private Vector3 nextPosition;
+    private float lifetime;
 
     public Vector3 NextPosition { get => nextPosition; set => nextPosition = value; }
 
@@ -55,7 +55,8 @@ public class TurretAttack : MonoBehaviour
             bullet = Instantiate(bulletPrefab, barrel.transform.position, Quaternion.identity);
             audioS.PlayOneShot(clip);
             bullet.transform.LookAt(NextPosition);
-            Destroy(bullet, lifetime);
+            lifetime = Vector3.Distance(transform.position, player.transform.position) / bulletPrefab.GetComponent<BulletMovement>().BulletSpeed;
+            Destroy(bullet, lifetime + 2);
         }
 
         yield return new WaitForSecondsRealtime(1/fireRate);
